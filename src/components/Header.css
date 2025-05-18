@@ -1,0 +1,104 @@
+/* Header.css */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.header-title:hover {
+  color: #6b46c1;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.write-button {
+  background-color: #6b46c1;
+  color: white;
+  box-shadow: 0 2px 4px rgba(107, 70, 193, 0.2);
+}
+
+.write-button:hover:not(.disabled) {
+  background-color: #553c9a;
+  box-shadow: 0 4px 6px rgba(107, 70, 193, 0.3);
+}
+
+.write-button.disabled {
+  background-color: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.logout-button {
+  background-color: #ef4444;
+  color: white;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+
+.logout-button:hover {
+  background-color: #dc2626;
+  box-shadow: 0 4px 6px rgba(239, 68, 68, 0.3);
+}
+
+.login-button {
+  background-color: #fbbf24;
+  color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(251, 191, 36, 0.2);
+}
+
+.login-button:hover {
+  background-color: #f59e0b;
+  box-shadow: 0 4px 6px rgba(251, 191, 36, 0.3);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 1rem;
+  }
+
+  .header-title {
+    font-size: 1.25rem;
+  }
+
+  .header-buttons button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
