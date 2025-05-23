@@ -17,6 +17,8 @@ function KakaoCallback() {
         .then((res) => {
           localStorage.setItem("token", res.data.result.accessToken);
           console.log(localStorage.getItem("token"));
+          localStorage.setItem("userId", res.data.result.userId);
+          console.log(localStorage.getItem("userId"));
           navigate("/"); // 로그인 후 홈으로 이동
         })
         .catch(() => {

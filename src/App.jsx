@@ -6,6 +6,7 @@ import WritePost from "./pages/WritePost";
 import './index.css';
 
 function App() {
+  
   return (
     <Router>
       <Header />

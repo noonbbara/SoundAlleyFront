@@ -103,7 +103,7 @@ function WritePost() {
             name="description"
             value={postData.description}
             onChange={handleChange}
-            required
+            
             placeholder="상세 내용을 입력하세요"
             rows="6"
           />

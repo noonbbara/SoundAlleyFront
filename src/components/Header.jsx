@@ -5,7 +5,7 @@ import './Header.css';
 const CLIENT_ID = "d0c74af08a3faa5561b7192e82c0aeb7";
 const REDIRECT_URI = "http://localhost:3000/oauth2/callback/kakao"; // 백엔드에 등록된 redirect URI
 
-function Header() {
+function Header({ setLoggedInUserId }) {
   const navigate = useNavigate();
   const token = localStorage.getItem("token"); // JWT 토큰 저장 방식 예시
 
@@ -18,6 +18,8 @@ function Header() {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem('userId');
+    //setLoggedInUserId(null);
     navigate("/");
   };
 
